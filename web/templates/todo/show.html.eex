@@ -1,0 +1,43 @@
+<h2>Show todo</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @todo.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @todo.description %>
+  </li>
+
+  <li>
+    <strong>Repeat count:</strong>
+    <%= @todo.repeat_count %>
+  </li>
+
+  <li>
+    <strong>Repeat units:</strong>
+    <%= @todo.repeat_units %>
+  </li>
+
+  <li>
+    <strong>Last completed at:</strong>
+    <%= @todo.last_completed_at %>
+  </li>
+
+  <li>
+    <strong>Next due at:</strong>
+    <%= @todo.next_due_at %>
+  </li>
+
+  <li>
+    <strong>Repeat based on:</strong>
+    <%= @todo.repeat_based_on %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: todo_path(@conn, :edit, @todo) %>
+<%= link "Back", to: todo_path(@conn, :index) %>
